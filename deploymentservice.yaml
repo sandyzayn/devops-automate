@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-docker-demo
+  labels:
+    app: jenkins-docker-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jenkins-docker-demo
+  template:
+    metadata:
+      labels:
+        app: jenkins-docker-demo
+    spec:
+      containers:
+      - name: jenkins-docker-demo
+        image: your-docker-image:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ENV_VAR_NAME
+          value: "value"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-docker-demo
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app: jenkins-docker-demo
