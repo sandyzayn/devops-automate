@@ -1,4 +1,11 @@
-The directory `/jenkins-docker-demo/jenkins-docker-demo/src/main` is intended to contain the main application code. Since you have not specified any particular Java classes or resources to include, I will leave this directory intentionally blank.
+package com.javatechie;
 
-# /jenkins-docker-demo/jenkins-docker-demo/src/main
-# This directory is intentionally left blank.
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DevopsIntegrationApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DevopsIntegrationApplication.class, args);
+    }
+}
