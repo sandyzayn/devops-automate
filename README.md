@@ -33,7 +33,7 @@ jenkins-docker-demo
 - Docker
 - Jenkins
 
-###IMAGES
+IMAGES
 <img width="1575" height="736" alt="Image" src="https://github.com/user-attachments/assets/d7dd39c7-c50f-4806-98af-e1b048e1d721" />
 
 <img width="1907" height="912" alt="Image" src="https://github.com/user-attachments/assets/e508f65b-f329-4e79-a310-7c17c4631f4e" />
